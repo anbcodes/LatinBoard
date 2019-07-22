@@ -1,8 +1,8 @@
 <template>
   <v-layout>
     <v-flex>
-      <v-layout v-for="(row, rowIndex) in board" :key="rowIndex">
-        <v-flex v-for="(column, colIndex) in row" :key="colIndex" xs2 sm2 md2 lg2 xl2>
+      <v-layout v-for="(row, rowIndex) in board" :key="rowIndex" wrap>
+        <v-flex v-for="(column, colIndex) in row" :key="colIndex" xs4 sm4 md2 lg2 xl2>
           <v-card elevation-0 style="width: 100%; height: 100%">
             <v-card-title primary-title>
               <h5 class="subheading mb-0">{{column[0]}} ({{rowIndex*6+colIndex+1}})</h5>
